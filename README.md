@@ -4,7 +4,7 @@
 
 Single-cell RNA sequencing (scRNA-seq) enables the characterization of cellular heterogeneity by profiling gene expression at the individual cell level. Accurate identification of cell types is a critical step in scRNA-seq analysis.
 
-In this project, I performed a complete scRNA-seq analysis workflow using the **Seurat framework** and compared **manual cell type annotation** with **reference-based automated annotation using Azimuth**. In addition, I explored biological pathways enriched in specific cell clusters using **Gene Set Enrichment Analysis (GSEA)**.
+In this project, I performed a complete scRNA-seq analysis workflow using the **Seurat framework** and compared **manual cell type annotation** with **reference-based automated annotation using Azimuth**. In addition, I explored biological pathways enriched in specific cell clusters using **Gene Set Enrichment Analysis (GSEA)**. Automated cell annotation tools like Azimuth are increasingly used in single-cell RNA-seq analysis, but their reliability compared to manual annotation remains unclear. In this study, I evaluated the agreement between manual marker-based annotation and Azimuth predictions in PBMC data to assess consistency and identify potential discrepancies.
 
 This project demonstrates a **fully reproducible single-cell RNA-seq analysis pipeline**, including preprocessing, clustering, annotation, and functional interpretation.
 
