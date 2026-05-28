@@ -205,7 +205,23 @@ azimu_annots<- DimPlot(pbmc_rename, group.by = "azimuth_predicts", label = TRUE,
 ggsave("figures/Assigning Celltypes to Clustrers.png",plot = last_plot(), bg = "white")
 my_annots + azimu_annots
 ggsave("figures/Comparison between Manual and Azimuth Annotations.png")
-
+# ==================================================
+# ARI : Adjusted Rand Index 
+# ==================================================
+# Extract labels
+manual_labels <- as.character(Idents(pbmc_rename))
+azimuth_labels <- pbmc_rename$azimuth_predicts
+# Remove NA values
+keep <- !is.na(manual_labels) & !is.na(azimuth_labels)
+# Compute ARI
+ari_score <- adjustedRandIndex(
+  manual_labels[keep],
+  azimuth_labels[keep]
+)
+# Print result
+print(paste("Adjusted Rand Index (ARI):", round(ari_score, 3)))
+# Check where the disagreement is 
+table(manual_labels, azimuth_labels)
 
 # ==================================================
 # 9. GSEA Analysis

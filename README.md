@@ -4,7 +4,7 @@
 
 Single-cell RNA sequencing (scRNA-seq) enables the characterization of cellular heterogeneity by profiling gene expression at the individual cell level. Accurate identification of cell types is a critical step in scRNA-seq analysis.
 
-In this project, I performed a complete scRNA-seq analysis workflow using the **Seurat framework** and compared **manual cell type annotation** with **reference-based automated annotation using Azimuth**. In addition, I explored biological pathways enriched in specific cell clusters using **Gene Set Enrichment Analysis (GSEA)**.
+In this project, I performed a complete scRNA-seq analysis workflow using the **Seurat framework** and compared **manual cell type annotation** with **reference-based automated annotation using Azimuth**. In addition, I explored biological pathways enriched in specific cell clusters using **Gene Set Enrichment Analysis (GSEA)**. Automated cell annotation tools like Azimuth are increasingly used in single-cell RNA-seq analysis, but their reliability compared to manual annotation remains unclear. In this study, I evaluated the agreement between manual marker-based annotation and Azimuth predictions in PBMC data to assess consistency and identify potential discrepancies.
 
 This project demonstrates a **fully reproducible single-cell RNA-seq analysis pipeline**, including preprocessing, clustering, annotation, and functional interpretation.
 
@@ -83,6 +83,8 @@ Tables and exported results are saved in:
 ## Comparison Between Manual and Azimuth Annotations
 
 ![alt text](<figures/Comparison between Manual and Azimuth Annotations.png>)
+
+Manual annotation of human PBMCs achieved moderate concordance with Azimuth  with "Adjusted Rand Index" (ARI) of 0.561, successfully identifying all major immune lineages : B cells, T cells, NK cells, Monocytes, DCs, and Platelets, in their expected UMAP positions. Agreement was near-perfect for B cells, NK/cytotoxic cells, and Platelets, with disagreement confined to fine-grained CD4 T cell subtypes, a challenge well-documented even for automated tools. The preserved UMAP topology across both methods confirms that manual annotation reliably captured the underlying biological structure of the data. Overall, these results demonstrate that manual annotation is effective for lineage-level identification, with reference-based tools like Azimuth offering complementary resolution for T cell subtype discrimination.
 
 ---
 
