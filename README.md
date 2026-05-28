@@ -84,6 +84,8 @@ Tables and exported results are saved in:
 
 ![alt text](<figures/Comparison between Manual and Azimuth Annotations.png>)
 
+Manual annotation of human PBMCs achieved moderate concordance with Azimuth (ARI = 0.561), successfully identifying all major immune lineages : B cells, T cells, NK cells, Monocytes, DCs, and Platelets, in their expected UMAP positions. Agreement was near-perfect for B cells, NK/cytotoxic cells, and Platelets, with disagreement confined to fine-grained CD4 T cell subtypes, a challenge well-documented even for automated tools. The preserved UMAP topology across both methods confirms that manual annotation reliably captured the underlying biological structure of the data. Overall, these results demonstrate that manual annotation is effective for lineage-level identification, with reference-based tools like Azimuth offering complementary resolution for T cell subtype discrimination.
+
 ---
 
 ## GSEA Analysis
